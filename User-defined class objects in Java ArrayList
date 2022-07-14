@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+import java.util.ListIterator;
+class Test{
+	String Name;
+	int roll;
+	Test(String name,int roll){
+		this.Name=name;
+		this.roll=roll;
+	}
+}
+public class Student{
+	public static void main(String[] args)
+	{
+		Test s1=new Test("Krati",22);
+		Test s2=new Test("Ishika",24);
+		 
+		ArrayList<Test> list=new ArrayList<Test>();
+		list.add(s1);
+		list.add(s2);
+		
+		ListIterator<Test> list1=list.listIterator();
+		while(list1.hasNext())
+		{
+			Test t=(Test)list1.next();
+			System.out.println(t.roll+" "+t.Name);  
+		}
+		
+		
+		
+	}
+}
